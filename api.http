@@ -1,0 +1,31 @@
+GET http://localhost:3000/movies
+
+###
+
+GET http://localhost:3000/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+###
+
+GET http://localhost:3000/movies?genre=action 
+
+###
+POST http://localhost:3000/movies 
+Content-Type: application/json
+
+{
+    "title": "The protector",
+    "year": 1999 ,
+    "director": "Christopher Nolan",
+    "duration": 154,
+    "poster": "https://www.themoviedb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+    "genre": ["Drama", "Romance"],
+    "rate": 8.8
+}
+
+###
+
+PATCH http://localhost:3000/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+Content-Type: application/json
+
+{
+    "year": 2024
+}
